@@ -251,7 +251,7 @@ function executaCodigo() {
     'Digite a categoria da sua CNH e veja quais tipos de veículos você pode dirigir'
   );
 
-  switch (habilitacao) {
+  switch (habilitacao.toLowerCase()) {
     case 'e':
       alert('Veículos com unidade acoplada acima de 6 tonelas');
     case 'd':
