@@ -233,3 +233,42 @@ function containsOnlyNumbers(str) {
   return /^\d+$/.test(str);
 }
  */
+
+//! Questão 10
+//todo Enunciado
+/* Utilize prompt e alert para solucionar essa questão.
+Construa um programa que determine, dada a categoria da carteira de motorista, que veículos podem ser conduzidos.
+
+A - Motos e triciclos.
+B - Carros de passeio.
+C - Veículos de carga acima de 3,5 toneladas.
+D - Veículos com mais de 8 passageiros.
+E - Veículos com unidade acoplada acima de 6 toneladas.
+Utilize a estrutura de controle switch e retorne mensagens adequadas, inclusive se a entrada de dados não for válida. Considere apenas uma categoria. */
+
+function executaCodigo() {
+  let habilitacao = prompt(
+    'Digite a categoria da sua CNH e veja quais tipos de veículos você pode dirigir'
+  );
+
+  switch (habilitacao) {
+    case 'e':
+      alert('Veículos com unidade acoplada acima de 6 tonelas');
+    case 'd':
+      alert('Veículos com mais de 8 passageiros');
+    case 'c':
+      alert('Veículos de carga acima de 3,5 tonelas');
+    case 'b':
+      alert('carros de passeio');
+      break;
+    case 'a':
+      alert('Motos e triciclos');
+      break;
+    default: {
+      alert('Digite uma categoria válida');
+      executaCodigo();
+    }
+  }
+}
+
+executaCodigo();
