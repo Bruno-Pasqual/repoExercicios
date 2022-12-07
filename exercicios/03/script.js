@@ -246,7 +246,7 @@ D - Veículos com mais de 8 passageiros.
 E - Veículos com unidade acoplada acima de 6 toneladas.
 Utilize a estrutura de controle switch e retorne mensagens adequadas, inclusive se a entrada de dados não for válida. Considere apenas uma categoria. */
 
-function executaCodigo() {
+/* function executaCodigo() {
   let habilitacao = prompt(
     'Digite a categoria da sua CNH e veja quais tipos de veículos você pode dirigir'
   );
@@ -272,3 +272,32 @@ function executaCodigo() {
 }
 
 executaCodigo();
+ */
+//! Questões PRATA
+//! questão 01
+//todo Enunciado
+/* Utilize prompt e alert para solucionar essa questão.
+Construa um programa que solicite do usuário o seu peso e a sua altura e mostre o cálculo do seu Índice de Massa Corpórea - IMC.
+
+IMC = peso (kg) / altura² (m)
+
+Valide todas as entradas de dados. */
+/* function executaCodigo() {
+  let peso = prompt('Digite o seu peso em kgs');
+  let altura = prompt('Digite sua altura em metros');
+  if (peso === '' || altura === '') {
+    alert(`Em alguma das variáveis você não digitou nada`);
+    executaCodigo();
+  } else if (peso <= 0 || altura <= 0) {
+    alert(`Os valores precisam ser positivos e diferentes de 0`);
+    executaCodigo();
+  } else if (isNaN(Number(peso)) || isNaN(Number(altura))) {
+    alert(`Algum dos valores deu inválido\n(Digite apenas números)`);
+    executaCodigo();
+  } else {
+    let imc = Number(peso) / Number(altura) ** 2;
+    alert(`Seu IMC é: ${imc.toFixed(2)}`);
+  }
+}
+executaCodigo();
+ */
