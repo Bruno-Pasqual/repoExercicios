@@ -313,7 +313,7 @@ A gorjeta é calculada como 10% do valor da conta (valor fixo).
 
 Valide todas as entradas de dados. */
 
-//!Funções -------
+/* //!Funções -------
 
 function validarValores(variavel) {
   //Função que realiza a validação das das entradas do usuário e retorna true ou false
@@ -356,8 +356,73 @@ function executaCodigo() {
 }
 
 executaCodigo();
-/* 
-function apenasNumeros(variavel) {
-  return /^\d+$/.test(variavel);
-}
  */
+
+//!Exercicio 03
+//todo Enunciado
+/* Crie uma function que, dado um ano, retorne verdadeiro se for bissexto ou falso caso contrário.
+
+Crie um programa que rode 5 testes com anos diferentes, exibindo o resultado na console.
+
+Valide todas as entradas de dados. */
+
+function ehBissexto(ano) {
+  //Função que checa se o ano passado pelo usuário é um ano bissexto ou não
+  if (ano % 4 === 0) {
+    if (ano % 100 === 0) {
+      if (ano % 400 === 0) {
+        console.log(`${ano} é bissexto 👍🏽`);
+      } else {
+        console.log(`${ano} não é bissexto 👎🏽 `);
+      }
+    } else {
+      console.log(`${ano} é bissexto 👍🏽`);
+    }
+  } else {
+    console.log(`${ano} não é bissexto 👎🏽 `);
+  }
+}
+
+function validarValores(variavel) {
+  //Função que realiza a validação das das entradas do usuário e retorna true ou false caso passe ou não pelas validações.
+  if (variavel === '') {
+    alert('Não deixe campos em branco');
+    return false;
+  } else if (variavel == 0) {
+    alert('Digite valores diferentes de zero');
+    return false;
+  } else if (isNaN(Number(variavel))) {
+    alert('Digite apenas números');
+    return false;
+  } else if (variavel < 0) {
+    alert('O valor deve ser positivo');
+    return false;
+  }
+  {
+    return true;
+  }
+}
+
+function recebaAno() {
+  let anosEscolhidos = [];
+  let teveErro = false;
+
+  for (let i = 1; i < 6; i++) {
+    //Loop for utilizado para receber 5 valores pelo prompt
+    let temp = prompt(`Digite o ${i}ª ano`);
+    if (validarValores(temp)) {
+      anosEscolhidos.unshift(temp);
+    } else {
+      teveErro = true;
+      break;
+    }
+  }
+  //Condicional que verifica se ocorreu tudo bem o código, caso não tenha ocorrido ele executa o código recebeAno() novamente, do contrário passa para a última parte que utiliza um map para verificar os anos dentro do array
+  teveErro
+    ? recebaAno()
+    : anosEscolhidos.map((valor) => {
+        ehBissexto(valor);
+      });
+}
+
+recebaAno();
