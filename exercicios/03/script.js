@@ -76,10 +76,11 @@ executaRotina();
 executaCodigo(); */
 
 //! Questão 5
+//todo Enunciado
 /* Crie um programa que receba na entrada o valor de três notas de um aluno - com valor entre 0 e 10 e informe a média entre elas.
 
 Não é necessário validar se as notas estão dentro do intervalo válido. */
-
+/* 
 function executaCodigo() {
   let arr = [];
   let temp = 0;
@@ -101,3 +102,37 @@ function executaCodigo() {
 }
 
 executaCodigo();
+ */
+
+//! Questão 6
+//todo -- Enunciado
+/* Utilize prompt e alert para solucionar essa questão.
+Um motorista deseja abastecer seu carro com um determinado valor em reais.
+
+Escreva um programa para ler o preço do litro do álcool e da gasolina e informe se o motorista deve usar um ou outro combustível.
+
+O cálculo básico para se descobrir se o álcool é vantajoso ou não em relação à gasolina é simples: basta dividir o preço do litro do álcool pelo da gasolina.
+
+Se o resultado for inferior a 0,7 use álcool. Se for maior ou igual à 0,7 então a gasolina é melhor. */
+
+function executaCodigo() {
+  let gasolina = +prompt('Quantos está a gasolina na sua cidade?');
+  let alcool = +prompt('Quantos está o álcool na sua cidade?');
+
+  if (isNaN(gasolina) || isNaN(alcool)) {
+    alert(
+      'Por favor, digite apenas números\n(utilize . e não , para a parte decimal)'
+    );
+  } else if (gasolina <= 0 || alcool <= 0) {
+    alert('Por favor, digite preços válidos\n(positivos e maiores que zero)');
+  } else {
+    let temp = alcool / gasolina;
+    temp.toFixed(2) >= 0.7
+      ? alert(`O índice deu: ${temp.toFixed(2)}\nO mais vantajoso: Gasolina`)
+      : alert(`O índice deu: ${temp.toFixed(2)}\nO mais vantajoso: Álcool`);
+  }
+}
+
+executaCodigo();
+
+//Feito no vscode
