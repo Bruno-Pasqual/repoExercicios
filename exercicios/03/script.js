@@ -273,7 +273,8 @@ Utilize a estrutura de controle switch e retorne mensagens adequadas, inclusive 
 
 executaCodigo();
  */
-//! Questões PRATA
+//! Questões PRATA---------------------
+
 //! questão 01
 //todo Enunciado
 /* Utilize prompt e alert para solucionar essa questão.
@@ -300,4 +301,63 @@ Valide todas as entradas de dados. */
   }
 }
 executaCodigo();
+ */
+
+//!Exercício 02
+//todo enunciado
+
+/* Utilize prompt e alert para solucionar essa questão.
+Crie um programa que obtenha o valor de uma conta de restaurante, a quantidade de pessoas na mesa e informe o total a ser pago (conta + gorjeta) e o valor por pessoa.
+
+A gorjeta é calculada como 10% do valor da conta (valor fixo).
+
+Valide todas as entradas de dados. */
+
+//!Funções -------
+
+function validarValores(variavel) {
+  //Função que realiza a validação das das entradas do usuário e retorna true ou false
+  if (variavel === '') {
+    alert('Não deixe campos em branco');
+    return false;
+  } else if (variavel == 0) {
+    alert('Digite valores diferentes de zero');
+    return false;
+  } else if (isNaN(Number(variavel))) {
+    alert('Digite valores válidos para ambos os campos');
+    return false;
+  } else if (variavel < 0) {
+    alert('O valor deve ser positivo');
+    return false;
+  }
+  {
+    return true;
+  }
+}
+
+function executaCodigo() {
+  //Código que irá ser executado para startar o programa e também será repetido em caso de não validação de alguma variável.
+  let numPessoas = prompt('Digite em quantas pessoas vocês estão');
+  let valorConta = prompt('Qual foi o valor da conta?');
+  if (validarValores(numPessoas) && validarValores(valorConta)) {
+    let valorParaCada = (valorConta * 1.1) / numPessoas;
+    alert(
+      `Valor da conta: ${valorConta}\nValor conta + gorjeta: ${(
+        valorConta * 1.1
+      ).toFixed(
+        2
+      )}\nNúmero de pessoas: ${numPessoas}\nValor para cada: ${valorParaCada.toFixed(
+        2
+      )}`
+    );
+  } else {
+    executaCodigo();
+  }
+}
+
+executaCodigo();
+/* 
+function apenasNumeros(variavel) {
+  return /^\d+$/.test(variavel);
+}
  */
