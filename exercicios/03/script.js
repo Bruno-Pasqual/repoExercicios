@@ -30,7 +30,7 @@ executaRotina();
 
  */
 
-function executaCodigo() {
+/* function executaCodigo() {
   const numero1 = prompt('Digite um número');
   const numero2 = prompt('Digite um número');
 
@@ -70,6 +70,33 @@ function executaCodigo() {
           `Valores digitados: ${numero1} e ${numero2} \n E os valores são iguais`
         )
       : '';
+  }
+}
+
+executaCodigo(); */
+
+//! Questão 5
+/* Crie um programa que receba na entrada o valor de três notas de um aluno - com valor entre 0 e 10 e informe a média entre elas.
+
+Não é necessário validar se as notas estão dentro do intervalo válido. */
+
+function executaCodigo() {
+  let arr = [];
+  let temp = 0;
+
+  for (var i = 0; i < 3; i++) {
+    arr.push(+prompt('Enter a number'));
+  }
+  for (let i = 0; i < 3; i++) {
+    temp = temp + arr[i];
+  }
+  let media = (temp / arr.length).toFixed(2);
+
+  if (isNaN(media)) {
+    alert('Digite apenas números');
+    executaCodigo();
+  } else {
+    alert(`A media das notas é: ${media}`);
   }
 }
 
