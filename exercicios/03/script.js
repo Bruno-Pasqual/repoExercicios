@@ -115,7 +115,7 @@ O cálculo básico para se descobrir se o álcool é vantajoso ou não em relaç
 
 Se o resultado for inferior a 0,7 use álcool. Se for maior ou igual à 0,7 então a gasolina é melhor. */
 
-function executaCodigo() {
+/* function executaCodigo() {
   let gasolina = +prompt('Quantos está a gasolina na sua cidade?');
   let alcool = +prompt('Quantos está o álcool na sua cidade?');
 
@@ -136,3 +136,46 @@ function executaCodigo() {
 executaCodigo();
 
 //Feito no vscode
+ */
+//! Questão 7
+//todo Enunciado
+/* Utilize prompt e alert para solucionar essa questão.
+Um motorista deseja abastecer seu carro com um determinado valor em reais.
+
+Escreva um programa para ler o preço do litro do combustível e o valor que o motorista deseja gastar e informe quantos litros foram colocados no tanque.
+
+Não se preocupe com a capacidade do tanque de combustível. */
+
+function executaCodigo() {
+  let dinheiro = +prompt('Quantos reais você tem para abastecer?');
+  let valorCombustivel = +prompt(
+    'E quantos está custando o combustível que você deseja abastecer?'
+  );
+
+  if (dinheiro === '' || valorCombustivel === '') {
+    alert('Os valores não podem ser vazios\nPor favor, digite algum valor');
+    executaCodigo();
+  } else if (isNaN(Number(dinheiro)) || isNaN(Number(valorCombustivel))) {
+    alert('Digite apenas números');
+    executaCodigo();
+  } else if (!dinheiro || !valorCombustivel) {
+    alert('É necessário passar ambos os valores');
+    executaCodigo();
+  } else if (Number(dinheiro) <= 0 || Number(valorCombustivel) <= 0) {
+    alert('Por favor, digite valores positivos e diferentes de zero');
+    executaCodigo();
+  } else {
+    calculaLitros(dinheiro, valorCombustivel);
+  }
+
+  function calculaLitros(dinheiro, valorCombustivel) {
+    let daParaComprar = dinheiro / valorCombustivel;
+    alert(
+      `Dinheiro: R$ ${dinheiro}\n Custo do combustível: R$ ${valorCombustivel}/L\n Quantos litros: ${daParaComprar.toFixed(
+        2
+      )}`
+    );
+  }
+}
+
+executaCodigo();
