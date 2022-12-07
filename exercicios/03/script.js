@@ -146,7 +146,7 @@ Escreva um programa para ler o preço do litro do combustível e o valor que o m
 
 Não se preocupe com a capacidade do tanque de combustível. */
 
-function executaCodigo() {
+/* function executaCodigo() {
   let dinheiro = +prompt('Quantos reais você tem para abastecer?');
   let valorCombustivel = +prompt(
     'E quantos está custando o combustível que você deseja abastecer?'
@@ -179,3 +179,57 @@ function executaCodigo() {
 }
 
 executaCodigo();
+ */
+
+//!Questão 8
+//todo Enunciado
+/* Utilize prompt e alert para solucionar essa questão.
+Construa um programa que determine, dada uma idade, se uma pessoa brasileira:
+
+É obrigada a votar (maiores de 18 até 70 anos).
+Tem voto eletivo (de 16 anos em diante até 18 anos e maiores de 70 anos).
+Não pode votar (menores de 16 anos).
+Valide a entrada de dados: a idade deve ser um número inteiro e positivo. Não se preocupe com a idade máxima. */
+
+/* function executaCodigo() {
+  let idade = prompt('Digite a sua idade utilizando números');
+
+  if (containsOnlyNumbers(idade)) {
+    votoEh(Number(idade));
+  } else {
+    alert(
+      'Você digitou uma idade inválida ou não digitou nada\n Por favor, digite um valor válido para a sua idade'
+    );
+    executaCodigo();
+  } */
+
+//! Faltar ajustar esse bloco comentado
+/*   if (isNaN(idade)) {
+    alert('Idade inválida');
+    executaCodigo(); 
+  } else if (idade < 0) {
+    alert('Idade inválida\n(apenas valores positivos)');
+    executaCodigo();
+  } else if (!idade) {
+    console.log(containsOnlyNumbers(idade));
+  } else {
+    votoEh(idade);
+  } */
+
+/*   function votoEh(idade) {
+    //Função que irá receber a variável idade, e irá checar a obrigatorioedade do voto de acordo com a idade.
+    idade < 16
+      ? alert('Você ainda não tem idade para votar ')
+      : (idade >= 16 && idade < 18) || idade > 70
+      ? alert('O voto para você é: FACULTATIVO')
+      : alert('O voto para você é: OBRIGATÓRIO');
+  }
+}
+
+executaCodigo();
+
+function containsOnlyNumbers(str) {
+  //Função que checa se uma determinada string (entrada do prompt) contém apenas números.
+  return /^\d+$/.test(str);
+}
+ */
