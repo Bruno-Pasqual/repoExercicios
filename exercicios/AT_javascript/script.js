@@ -271,8 +271,8 @@ Utilize a estrutura de controle switch e retorne mensagens adequadas, inclusive 
   }
 }
 
-executaCodigo();
- */
+executaCodigo(); */
+
 //! Questões PRATA---------------------
 
 //! questão 01
@@ -366,7 +366,7 @@ Crie um programa que rode 5 testes com anos diferentes, exibindo o resultado na 
 
 Valide todas as entradas de dados. */
 
-function ehBissexto(ano) {
+/* function ehBissexto(ano) {
   //Função que checa se o ano passado pelo usuário é um ano bissexto ou não
   if (ano % 4 === 0) {
     if (ano % 100 === 0) {
@@ -426,3 +426,6 @@ function recebaAno() {
 }
 
 recebaAno();
+ 
+ */
+jogaDado.addEvent;
