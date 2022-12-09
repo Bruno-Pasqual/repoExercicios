@@ -1,0 +1,64 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 85vw;
+  height: 48vh;
+  border: 1px solid black;
+  background-image: url('https://classic.exame.com/wp-content/uploads/2020/08/RN_Mega-Sena-acumulada-170-mihoes-de-reais_30072014002-1.jpg?quality=70&strip=info&w=750');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0.85);
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  border: 2px solid rgba(255, 255, 255, 0.329);
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  background: rgba(40, 40, 40, 0.8);
+  border-radius: 50%;
+  border: 2px solid #0f610f;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-70px);
+  /* opacity: 0; */
+}
+
+.container_numeros {
+  display: flex;
+  column-gap: 10px;
+}
+
+.box.ativo {
+  animation-name: descida;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes descida {
+  0% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
