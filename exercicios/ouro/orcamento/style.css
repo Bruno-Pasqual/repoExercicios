@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(33, 33, 33);
+  column-gap: 40px;
+}
+
+form {
+  width: 250px;
+  height: 400px;
+  border: 1px solid lightblue;
+  display: grid;
+  place-content: center;
+  background: rgba(21, 21, 21, 0.895);
+  border: 2px solid rgba(218, 165, 32, 0.352);
+  border-radius: 15px;
+  row-gap: 10px;
+}
+
+.info_div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 0.2rem;
+  color: rgb(191, 159, 77);
+}
+
+input {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: rgb(219, 225, 219);
+  font-size: 1rem;
+  font-weight: 700;
+  background: grey;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background: rgb(22, 22, 22);
+  color: rgb(221, 221, 221);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgb(105, 80, 15);
+  transition: all 0.5s;
+}
+
+button:hover {
+  letter-spacing: 5px;
+  background: rgba(255, 255, 255, 0.878);
+  color: rgb(35, 35, 35);
+  cursor: pointer;
+  border: 2px solid rgb(165, 138, 42);
+}
+
+#containerRelatorio {
+  width: 250px;
+  height: 400px;
+  border: 3px solid rgb(39, 39, 39);
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+  background: rgba(20, 20, 20, 0.895);
+  border: 3px solid rgba(218, 165, 32, 0.352);
+}
+
+#containerRelatorio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 40px;
+}
+
+.box {
+  height: 50px;
+  width: 230px;
+  border: 1px solid rgb(60, 60, 60);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title {
+  font-size: 1rem;
+  color: rgb(182, 144, 73);
+  font-weight: bold;
+  position: absolute;
+  top: -25px;
+}
+
+.details {
+  color: rgb(112, 112, 112);
+  padding-left: 5px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="return false;">
+      <div class="info_div">
+        <label for="renda">Sua renda</label>
+        <input type="number" name="renda" id="renda_input" />
+      </div>
+      <div class="info_div">
+        <label for="moradia">Moradia</label>
+        <input type="number" name="moradia" id="moradia_input" />
+      </div>
+      <div class="info_div">
+        <label for="transporte">transporte</label>
+        <input type="number" name="transporte" id="transporte_input" />
+      </div>
+      <div class="info_div">
+        <label for="educacao">Educação</label>
+        <input type="number" name="educacao" id="educacao_input" />
+      </div>
+      <button id="submit_button">Verificar</button>
+    </form>
+    <div id="containerRelatorio">
+      <div class="boxRenda box">
+        <p class="title">Sua renda é</p>
+        <p class="details">details</p>
+      </div>
+      <div class="boxMoradia box">
+        <p class="title">Seu gasto com moradia:</p>
+        <p class="details">valor da renda</p>
+      </div>
+      <div class="boxTransporte box">
+        <p class="title">Seu gasto com transporte:</p>
+        <p class="details">Valor gasto com transporte</p>
+      </div>
+      <div class="boxEducacao box">
+        <p class="title">Seu gasto com educação:</p>
+        <p class="details">Valor gasto</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

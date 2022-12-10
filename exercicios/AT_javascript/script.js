@@ -428,4 +428,3 @@ function recebaAno() {
 recebaAno();
  
  */
-jogaDado.addEvent;
