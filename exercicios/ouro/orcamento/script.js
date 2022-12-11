@@ -9,52 +9,41 @@ const educacaoInput = document.getElementById('educacao_input');
 const botaoSubmit = document.getElementById('submit_button');
 //Selecionando os campos de saída
 const campoSaidas = document.querySelectorAll('.details');
+const recomendados = document.querySelectorAll('recomendado');
 
 // Contantes ----
 
 //------------------------------------//-----------------------
 
 botaoSubmit.addEventListener('click', () => {
-  [rendaValor, gastoEducacao, gastoMoradia, gastoTransporte] = [
-    Number(rendaInput.value),
-    Number(moradiaInput.value),
-    Number(transporteInput.value),
-    Number(educacaoInput.value),
-  ];
+  for (let i = 1; i < campoSaidas.length; i++) {
+    //! variáveis ------------------------------------
+    [renda, moradia, transporte, educacao] = [
+      Number(rendaInput.value),
+      Number(moradiaInput.value),
+      Number(transporteInput.value),
+      Number(educacaoInput.value),
+    ];
+    let porcentagens = ['', 0.3, 0.2, 0.15];
+    let saidas = [renda, moradia, transporte, educacao];
+    console.log(saidas);
+    let porcentagem = saidas[i].value / saidas[0];
+    console.log(porcentagem);
 
-  [renda, moradiaPorcentagem, transportePorcentagem, educacaoPorcentagem] = [
-    0, 30, 15, 20,
-  ];
-
-  let arr2 = [
-    renda,
-    moradiaPorcentagem,
-    transportePorcentagem,
-    educacaoPorcentagem,
-  ];
-
-  //------------------------------------//-----------------------
-
-  let arr = [rendaValor, gastoEducacao, gastoMoradia, gastoTransporte];
-  for (let i = 0; i < arr.length; i++) {
-    let temp = (arr[i] / rendaValor).toFixed(2) * 100;
-    console.log(temp, arr2[i]);
-    if (temp - arr2[i] < 0) {
-      console.log(
-        `O valor informado está abaixo do estipulado em ${temp - arr2[i]}% `
-      );
-    } else if (temp - arr2[i] === 0) {
-      console.log(
-        `O valor informado está de acordo com a porcentagem ${arr2[i]}%`
-      );
-    } else {
-      console.log(
-        `O valor informado está acima do estipulado em ${temp - arr2[i]}`
-      );
-    }
+    //!  Fim das variáveis ------------------------------
+    campoSaidas[i].style.color = 'red';
   }
-
-  // -----
 });
 
-//----------------------------------//-------------------------
+//aa
+function fazerAnalise() {
+  console.log(rendaInput.value);
+  campoSaidas[0].innerHTML = `<p class="details">R$: ${rendaInput.value}</p>`;
+  //Gasto com casa
+  campoSaidas[1].innerHTML = `Seu custo: R$ ${moradiaInput.value} ( ${
+    Number(moradiaInput.value / rendaInput.value) * 100
+  }%)`;
+  recomendados[1].innerHTML = `Seu custo: R$ ${moradiaInput.value} ( ${
+    Number(moradiaInput.value / rendaInput.value) * 100
+  }%)`;
+}
