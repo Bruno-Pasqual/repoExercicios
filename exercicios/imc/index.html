@@ -22,7 +22,9 @@
             type="number"
             class="input"
             placeholder="Digite o seu peso (Kg)"
+            step=".01"
           />
+
           <p class="mensagem_erro">assdadasdsad</p>
         </div>
         <div class="second_row">
@@ -30,13 +32,26 @@
           <input
             type="number"
             class="input"
-            placeholder="Digite sua altura (Cm)"
+            placeholder="Digite sua altura (metros)"
+            step=".01"
           />
           <p class="mensagem_erro">assdadasdsad</p>
         </div>
         <button id="submit_button">Analisar</button>
       </form>
-      <div class="container_resultados"></div>
+      <div class="container_resultados">
+        <h2>Seu resultado</h2>
+        <div class="relatorio_container">
+          <div class="primeira_linha">
+            <p class="titulo_resultado">IMC:</p>
+            <p id="resultado_imc">25.78</p>
+          </div>
+          <div class="segunda_linha">
+            <p class="titulo_resultado">Classificação:</p>
+            <p id="resultado_categoria">Magro</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Script -->
