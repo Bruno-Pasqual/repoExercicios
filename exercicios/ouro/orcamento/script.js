@@ -10,11 +10,12 @@ const botaoSubmit = document.getElementById('submit_button');
 //Selecionando os campos de saída
 const campoSaidas = document.querySelectorAll('.details');
 const recomendados = document.querySelectorAll('.recomendado');
+const camposResultado = document.querySelectorAll('.resultado');
 
 // Contantes ----
 
 //------------------------------------//-----------------------
-console.log(recomendados);
+console.log(camposResultado);
 
 botaoSubmit.addEventListener('click', () => {
   for (let i = 0; i < campoSaidas.length; i++) {
@@ -27,9 +28,9 @@ botaoSubmit.addEventListener('click', () => {
     ];
     let porcentagens = ['', 0.3, 0.2, 0.15];
     let saidas = [renda, moradia, transporte, educacao];
-    let porcentagem = Number(saidas[i].value) / Number(saidas[i]);
-    console.log(porcentagem);
-
+    let porcentagem = Number((saidas[i] / saidas[0]).toFixed(2));
+    // console.log(porcentagem, porcentagens[i]);
+    // console.log(porcentagem > porcentagens[i] ? 'true' : 'false');
     //!  Fim das variáveis ------------------------------
     if (i === 0) {
       campoSaidas[i].innerHTML = `<p class="details">R$: ${saidas[i]}</p>`;
@@ -42,21 +43,30 @@ botaoSubmit.addEventListener('click', () => {
         porcentagens[i] * rendaInput.value
       } ( ${Number(porcentagens[i] * 100)}%)`;
     }
+    checarSaida(i);
   }
-  // fazerAnalise();
 });
 
-//aa
-function fazerAnalise() {
-  let saidas = [renda, moradia, transporte, educacao];
-  console.log(rendaInput.value);
-  //alterando valor da renda
-
-  //Gasto com casa
-  campoSaidas[0 + 1].innerHTML = `Seu custo: R$ ${saidas[1]} ( ${
-    Number(saidas[1] / rendaInput.value) * 100
-  }%)`;
-  recomendados[0].innerHTML = `recomendado: R$ ${saidas[1]} ( ${
-    Number(moradiaInput.value / rendaInput.value) * 100
-  }%)`;
+function checarSaida(i) {
+  if (i != 0) {
+    let saidas = [renda, moradia, transporte, educacao];
+    let porcentagem = Number((saidas[i] / saidas[0]).toFixed(2));
+    let porcentagensFuncao = [0.3, 0.2, 0.15];
+    console.log(
+      'A porcentagem é: ',
+      porcentagem,
+      '\nporcentagem enunciado: ',
+      porcentagensFuncao[i - 1]
+    );
+    if (porcentagem < porcentagensFuncao[i - 1]) {
+      camposResultado[i - 1].textContent = 'Abaixo do recomendado ';
+      camposResultado[i - 1].style.color = 'green';
+    } else if (porcentagem === porcentagensFuncao[i - 1]) {
+      camposResultado[i - 1].textContent = 'Igual ao recomendado ';
+      camposResultado[i - 1].style.color = 'yellow';
+    } else {
+      camposResultado[i - 1].textContent = 'Acima do recomendado ';
+      camposResultado[i - 1].style.color = 'red';
+    }
+  }
 }
