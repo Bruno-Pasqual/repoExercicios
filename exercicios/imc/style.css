@@ -29,7 +29,7 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 
 .first_row,
@@ -37,6 +37,7 @@ form {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
+  position: relative;
 }
 
 label {
@@ -83,4 +84,17 @@ input {
   top: 50%;
   left: 50%;
   border-radius: 10px;
+  display: none;
+}
+
+.mensagem_erro {
+  color: rgb(245, 5, 5);
+  text-shadow: 1px 1px 1px black;
+  position: absolute;
+  left: -10px;
+  top: 65px;
+  font-size: 12px;
+  width: 100%;
+  text-align: right;
+  display: none;
 }
