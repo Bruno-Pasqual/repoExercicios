@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, 
+    initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cálculo de IMC</title>
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <form action="" onsubmit="return false">
+        <h1>Calcule o seu IMC</h1>
         <div class="first_row">
           <label for="peso">Peso</label>
           <input
             type="number"
             id="peso_input"
-            placeholder="Digite o seu peso"
+            placeholder="Digite o seu peso (Kg)"
           />
         </div>
         <div class="second_row">
@@ -22,9 +29,10 @@
           <input
             type="number"
             id="altura_input"
-            placeholder="Digite sua altura em Centimetros"
+            placeholder="Digite sua altura (Cm)"
           />
         </div>
+        <button id="submit_button">Analisar</button>
       </form>
       <div class="container_resultados"></div>
     </div>
