@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* ! Header -------------------------------------- */
+/* ! Header ---------------------------------------------------------- */
 header {
   background: black;
   height: 110px;
@@ -31,7 +31,18 @@ header img {
   column-gap: 20px;
 }
 
-/* ! Main e container de filmes -------------------- */
+.lado_direito a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lado_direito a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* ! Main e container de filmes ---------------------------------------- */
 
 .texto_main {
   font-size: 1.3rem;
@@ -76,17 +87,108 @@ main {
   padding: 2rem;
 }
 
-.lado_direito a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.lado_direito a:hover {
-  cursor: pointer;
-}
-
 footer {
   height: 50px;
   background: black;
+}
+
+/* Tabela da página */
+
+table {
+  margin: 0 auto;
+  font-weight: bold;
+  border-right: 1px solid #a4373c;
+}
+
+td {
+  border-top: 1px solid #a4373c;
+  border-bottom: 1px solid #a4373c;
+  text-align: center;
+  padding: 0 1rem;
+  border-left: 1px solid #a4373c;
+}
+
+tr:first-child td:nth-child(1) {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+tr:nth-child(2) {
+  color: #a4373c;
+}
+
+tr:nth-child(3),
+tr:nth-child(5) {
+  font-weight: bold;
+}
+
+tr:nth-child(4) td:nth-child(1),
+tr:nth-child(4) td:nth-child(2) {
+  color: green;
+}
+
+/* ! Footer --------------------------------------------------------- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  column-gap: 400px;
+}
+
+/* ! Segunda tela ----------------------------------------------------------- */
+.nova_tela {
+  height: 100vh;
+  background: bisque;
+  border: 1px solid green;
+  margin-top: 3rem;
+  display: flex;
+}
+
+.box_esquerda {
+  width: 50%;
+  height: 100%;
+  background: #f5f5dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 20px;
+}
+
+.box_esquerda img {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.box_esquerda p {
+  padding: 0 5px;
+}
+
+.box_direita {
+  height: 100%;
+  width: 50%;
+  background: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cinema_video {
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #00008b;
+  border-radius: 5px;
+  color: white;
+  max-width: 300px;
+}
+
+.box_direita_texto {
+  color: #0d088c;
+  font-weight: bold;
 }
