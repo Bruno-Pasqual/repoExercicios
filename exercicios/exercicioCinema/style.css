@@ -245,7 +245,7 @@ ul {
   list-style: none;
 }
 
-li:first-child {
+.titulo_lista {
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
@@ -260,4 +260,26 @@ li {
 
 #tela_localizacao p:first-child {
   font-size: 1.3rem;
+}
+
+.logo_whatsapp {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+}
+
+.logo_whatsapp img {
+  width: 50px;
+}
+
+ol {
+  padding-left: 40px;
+}
+
+.segunda_lista li {
+  margin-left: 1rem;
+}
+
+.ultimo_lista {
+  color: rgba(254, 0, 0);
 }
