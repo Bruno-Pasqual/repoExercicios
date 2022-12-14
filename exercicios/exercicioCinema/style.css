@@ -85,11 +85,11 @@ span {
   position: absolute;
   top: -14%;
   right: -28%;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .icone_fecha:hover {
-  transform: scale(0.15);
+  transform: scale(0.1);
   cursor: pointer;
 }
 
@@ -205,6 +205,11 @@ button {
   color: white;
   max-width: 300px;
   border: 3px solid #fbac13;
+}
+
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .box_direita_texto {
