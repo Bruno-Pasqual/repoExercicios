@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício - doces e caixas</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" onsubmit="return false">
+        <div class="container_entradas">
+          <section class="container_input">
+            <label for="quantidade_doces">Quantidade de doces</label>
+            <input
+              oninput="checarEntradas()"
+              type="number"
+              name="quantidade_doces"
+              class="entrada"
+              placeholder="Digite a quantidade de doces produzidos"
+            />
+            <p class="mensagem_erro">Lorem ipsum dolor sit amet.</p>
+          </section>
+          <section class="container_input">
+            <label for="capacidade_das_caixas">Capacidade por caixa</label>
+            <input
+              oninput="checarEntradas()"
+              type="number"
+              name="capacidade_das_caixas"
+              class="entrada"
+              placeholder="Quantos doces cabem em cada caixa?"
+            />
+            <p class="mensagem_erro">Lorem ipsum dolor sit amet.</p>
+          </section>
+          <button id="botao_empacotar" type="submit">Empacotar</button>
+        </div>
+        <div class="container_resultado">
+          <h2>
+            Para empacotar number doces <br />
+            foram necessárias:
+          </h2>
+          <div class="container_caixa_completa">
+            <p>Caixas completas:</p>
+            <p id="saida_caixas_completas">Caixas completas:</p>
+          </div>
+          <div class="container_caixa_incompleta">
+            <p>Caixas Incompletas:</p>
+            <p id="saida_caixas_incompletas">Caixas completas:</p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
