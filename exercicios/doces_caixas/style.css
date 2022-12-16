@@ -12,6 +12,8 @@ body {
   font-family: sans-serif;
 }
 
+/* ! Container entradas -------------------------------- */
+
 .container_entradas {
   border-radius: 15px;
   padding: 2rem;
@@ -77,18 +79,29 @@ label {
   bottom: -19px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.559);
   font-size: 14px;
+  display: none;
 }
 
-/* Container Saídas ------------------------------------------ */
+/*! Container Saídas ------------------------------------------ */
+
 .container_saidas {
   background: rgba(173, 216, 230, 0.336);
   padding: 2rem;
+  display: grid;
+  place-content: center;
+  row-gap: 40px;
+  background: #faedcd;
+  border-radius: 10px;
+  box-shadow: 10px 12px 7px rgba(0, 0, 0, 0.086);
 }
 
+/* Container_informações ------- */
+
 .container_informacoes {
-  border: 1px solid rgb(185, 185, 185);
+  border: 1px solid rgb(181, 155, 125);
   padding: 1rem 0 0.5rem 1rem;
   position: relative;
+  border-radius: 5px;
 }
 
 .container_informacoes img {
@@ -96,6 +109,15 @@ label {
 }
 
 .box_title {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: #d4a373;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.box_title2 {
+  font-size: 1.2rem;
   position: absolute;
   top: -15px;
   left: 10px;
@@ -116,6 +138,11 @@ label {
   column-gap: 10px;
 }
 
-/* Container Caixas */
+/* Container Caixas ------------ */
+
 .container_caixas {
+  position: relative;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border: 1px solid rgb(181, 155, 125);
+  border-radius: 5px;
 }

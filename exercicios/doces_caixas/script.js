@@ -1,35 +1,53 @@
-// asadasdasdsdadads
+//! Selecionando os elementos  ------------------------------------------------
+
+const entradaDeDados = document.querySelectorAll('.entrada_dados');
+const mensagensErro = document.querySelectorAll('.mensagem_erro');
+const submitButton = document.getElementById('submit_button');
+
+//! Variaveís de controle -----------------------------------------------------
+
+let houveErro = true;
+
+//! Função --------------------------------------------------------------------
+
+//Função para fazer a validação dos dados -----
 
 function checarEntradas() {
-  console.log(entradas);
-  //---- checando o peso
-  entradas.forEach((input, index) => {
-    //Sem valor algum
-    if (input.value === '') {
-      input.style.border = '2px solid red';
+  //---- Função para fazer validação das entradas
+
+  entradaDeDados.forEach((entrada_dados, index) => {
+    if (entrada_dados.value === '') {
+      mensagensErro[index].style.display = 'block';
       mensagensErro[index].textContent = 'Não deixe campos em branco';
+      entrada_dados.style.border = '2px solid red';
+    } else if (Number(entrada_dados.value) <= 0) {
       mensagensErro[index].style.display = 'block';
-      //Peso superior a 400 kgs (pessoa mais pesada no planeta está abaixo)
-    } else if (index === 0 && Number(input.value) > 400) {
-      input.style.border = '2px solid red';
-      mensagensErro[index].textContent = 'Digite um peso válido (max 400kgs)';
-      mensagensErro[index].style.display = 'block';
-      //Checando se a pessoa colocou o valor em CMs
-    } else if (index === 1 && Number(input.value) > 3) {
-      input.style.border = '2px solid red';
       mensagensErro[index].textContent =
-        'Coloque uma altura válida (metros) (max: 3m)';
-      mensagensErro[index].style.display = 'block';
-      //Valor igual a 0
-    } else if (Number(input.value) <= 0) {
-      input.style.border = '2px solid red';
-      mensagensErro[index].textContent =
-        'Devem ser positivos e diferentes de 0';
-      mensagensErro[index].style.display = 'block';
+        'Digite um valor positivo e diferente de 0';
+      mensagensErro[index].style.border = '2px solid red';
     } else {
       mensagensErro[index].style.display = 'none';
-      input.style.border = '2px solid lightgreen';
-      houveErro = true;
+      entrada_dados.style.border = '2px solid green';
+      houveErro = false;
     }
   });
 }
+
+function realizarLogica() {
+  //
+  let quantidadeDoces = Number(entradaDeDados[0].value);
+  let capacidadeCaixas = Number(entradaDeDados[1].value);
+  let caixasCompletas = 0;
+  //
+  for (i = 1; quantidadeDoces >= capacidadeCaixas; i++) {
+    caixasCompletas++;
+  }
+  console.log(caixasCompletas);
+}
+
+//! Event handlers -------------------------------------------------------------
+
+submitButton.addEventListener('click', () => {
+  checarEntradas();
+  realizarLogica();
+});

@@ -8,29 +8,31 @@
     <title>Exercício - doces/caixas</title>
   </head>
   <body>
-    <form action="" oninput="return false">
+    <form action="" onsubmit="return false">
       <div class="container_entradas">
         <div class="form_box">
           <label for="quantidade_doces">Doces produzidos</label>
           <input
+            oninput="checarEntradas()"
             placeholder="Qual foi a quantidade de doces produzidos?"
             type="number"
             name="quantidade_doces"
             class="entrada_dados"
           />
-          <p class="mensagem_erro">mensagem mensagem_erro</p>
+          <p class="mensagem_erro"></p>
         </div>
         <div class="form_box">
           <label for="capacidade_da_caixa">Capacidade da caixa</label>
           <input
+            oninput="checarEntradas()"
             placeholder="Qual a capacidade de doces em cada caixa?"
             type="number"
             name="capacidade_da_caixa"
             class="entrada_dados"
           />
-          <p class="mensagem_erro">mensagem mensagem_erro</p>
+          <p class="mensagem_erro"></p>
         </div>
-        <button type="submit">Empacotar</button>
+        <button id="submit_button" type="submit">Empacotar</button>
       </div>
       <div class="container_saidas">
         <div class="container_informacoes">
@@ -49,9 +51,14 @@
           </div>
         </div>
         <div class="container_caixas">
-          <p class="box_title">Caixas necessárias</p>
+          <p class="box_title2">Caixas necessárias</p>
+          <p id="quantidade_caixas_fechadas">20 caixas completas</p>
+          <p id="quantidade_caixas_incompletas">Não foi necessário uma extra</p>
         </div>
       </div>
     </form>
+
+    <!-- Script -->
+    <script src="script.js"></script>
   </body>
 </html>
