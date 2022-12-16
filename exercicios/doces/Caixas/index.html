@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="" onsubmit="return false">
+      <form action="" onsubmit="event.preventDefault()">
         <div class="container_entradas">
           <section class="container_input">
             <label for="quantidade_doces">Quantidade de doces</label>
@@ -36,17 +36,14 @@
           <button id="botao_empacotar" type="submit">Empacotar</button>
         </div>
         <div class="container_resultado">
-          <h2>
-            Para empacotar number doces <br />
-            foram necessárias:
-          </h2>
           <div class="container_caixa_completa">
             <p>Caixas completas:</p>
-            <p id="saida_caixas_completas">Caixas completas:</p>
+            <p id="saida_caixas_completas"></p>
           </div>
+          <p id="necessitou_incompleta">Precisou de uma incompleta?</p>
           <div class="container_caixa_incompleta">
-            <p>Caixas Incompletas:</p>
-            <p id="saida_caixas_incompletas">Caixas completas:</p>
+            <p>Uma caixa incompleta com: :</p>
+            <p id="saida_caixas_incompletas"></p>
           </div>
         </div>
       </form>

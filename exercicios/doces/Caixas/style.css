@@ -85,7 +85,7 @@ button:hover {
   place-content: center;
   row-gap: 30px;
   position: relative;
-  display: none;
+  /* display: none; */
 }
 
 .container_resultado {
@@ -102,5 +102,5 @@ h2 {
 .container_caixa_incompleta {
   display: flex;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  /* padding: 0 1.5rem; */
 }
