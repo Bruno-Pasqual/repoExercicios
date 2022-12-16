@@ -18,6 +18,7 @@ const saidaCaixasCompletas = document.getElementById(
 const saidaCaixasIncompletas = document.getElementById(
   'quantidade_caixas_incompletas'
 );
+const containerSaidas = document.querySelector('.container_saidas');
 
 //! Variaveís de controle -----------------------------------------------------
 
@@ -39,7 +40,10 @@ function checarEntradas() {
       mensagensErro[index].style.display = 'block';
       mensagensErro[index].textContent =
         'Digite um valor positivo e diferente de 0';
-      mensagensErro[index].style.border = '2px solid red';
+    } else if (!Number.isInteger(Number(entrada_dados.value))) {
+      mensagensErro[index].style.display = 'block';
+      mensagensErro[index].textContent = 'Digite um valor inteiro';
+      entrada_dados.style.border = '2px solid red';
     } else {
       mensagensErro[index].style.display = 'none';
       entrada_dados.style.border = '2px solid green';
@@ -53,17 +57,20 @@ function realizarLogica() {
   let quantidadeDoces = Number(entradaDeDados[0].value);
   let capacidadeDasCaixas = Number(entradaDeDados[1].value);
   let caixasCompletas = Math.floor(quantidadeDoces / capacidadeDasCaixas);
-  let quantidadeDocesSobraram = quantidadeDoces % caixasCompletas;
+  let quantidadeDocesSobraram = Number(quantidadeDoces % caixasCompletas);
   //
 
   console.log(
     `quantidade de doces: ${quantidadeDoces}\nCapacidade das caixas: ${capacidadeDasCaixas}\nCaixas completas: ${caixasCompletas}\nDoces que sobraram: ${quantidadeDocesSobraram}`
   );
 
-  informacaoDoces.textContent = quantidadeDoces;
-  informacoesCapacidadeCaixa.textContent = capacidadeDasCaixas;
+  informacaoDoces.textContent = `${quantidadeDoces}`;
+  informacoesCapacidadeCaixa.textContent = `${capacidadeDasCaixas}`;
   saidaCaixasCompletas.textContent = `${caixasCompletas} caixas completas`;
-  quantidadeDocesSobraram != 0 ? saidaCaixasIncompletas.textContent= : '';
+  if (quantidadeDocesSobraram != 0) {
+    saidaCaixasIncompletas.textContent = `Foi necessário uma caixa incompleta\ncom ${quantidadeDocesSobraram} doces`;
+  }
+  containerSaidas.classList.add('animate');
 }
 
 //! Event handlers -------------------------------------------------------------
