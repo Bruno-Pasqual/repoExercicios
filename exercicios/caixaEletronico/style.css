@@ -1,0 +1,60 @@
+body {
+  height: 70vh;
+  display: grid;
+  place-content: center;
+  background: #2d3142;
+}
+
+.container {
+  max-width: 400px;
+}
+
+form {
+  padding: 1rem;
+  background: #274c77;
+  border-radius: 10px;
+}
+
+input {
+  padding: 0.5rem 0.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #dedfe0;
+  padding-left: 15px;
+  font-weight: 700;
+}
+
+label {
+  color: #2d3142;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.primeira_linha {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  row-gap: 10px;
+  position: relative;
+}
+
+#mensagem_erro {
+  color: rgb(201, 9, 9);
+  position: absolute;
+  bottom: -17px;
+  left: 20px;
+}
+
+button {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 0.5rem 0;
+  border: none;
+  color: #ef8354;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
