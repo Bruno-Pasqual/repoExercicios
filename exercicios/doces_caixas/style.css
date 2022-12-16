@@ -12,10 +12,6 @@ body {
   font-family: sans-serif;
 }
 
-form {
-  color: red;
-}
-
 .container_entradas {
   border-radius: 15px;
   padding: 2rem;
@@ -90,9 +86,36 @@ label {
 }
 
 .container_informacoes {
-  border: 1px solid black;
+  border: 1px solid rgb(185, 185, 185);
+  padding: 1rem 0 0.5rem 1rem;
+  position: relative;
 }
 
 .container_informacoes img {
   width: 24px;
+}
+
+.box_title {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: #d4a373;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.container_informacoes p {
+  font-size: 1.2rem;
+  vertical-align: center;
+}
+
+.linha_informacoes {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Container Caixas */
+.container_caixas {
 }
