@@ -35,16 +35,17 @@ label {
   width: 300px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   row-gap: 10px;
   position: relative;
 }
 
 #mensagem_erro {
-  color: rgb(201, 9, 9);
+  color: rgb(196, 59, 59);
   position: absolute;
-  bottom: -17px;
-  left: 20px;
+  bottom: -25px;
+  left: 15px;
+  text-shadow: 1px 1px 1px black;
 }
 
 button {

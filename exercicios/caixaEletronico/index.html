@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="" onsubmit="preventDefault()">
+      <form action="" onsubmit="return false">
         <div class="primeira_linha">
           <label for="valor_a_sacar">Valor a sacar</label>
           <input
@@ -17,8 +17,9 @@
             type="number"
             name="valor_a_sacar"
             id="valor_a_sacar"
+            oninput="checarDado()"
           />
-          <div id="mensagem_erro">asasas</div>
+          <div id="mensagem_erro"></div>
         </div>
         <button id="submit_button" type="submit">Sacar</button>
       </form>
