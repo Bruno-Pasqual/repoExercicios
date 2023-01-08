@@ -75,8 +75,11 @@ function validaCPF(cpf) {
     acumulador += temp;
   });
 
-  let primeiroDigito = 11 - (237 % 11);
-  primeiroDigito == doisDigitos[0] ? (doisDigitos[0] = 1) : 'deu ruim';
+  let primeiroDigito = 11 - (acumulador % 11);
+  //Utilizarei o próprio array doisDigitos para fazer uma validação ao final do código
+  primeiroDigito == doisDigitos[0]
+    ? (doisDigitos[0] = 1)
+    : (doisDigitos[0] = 0);
 
   //Incluindo a variável primeiro digito na string do cpf para a segunda parte.
   cpfLimpo.push(String(primeiroDigito));
@@ -94,10 +97,9 @@ function validaCPF(cpf) {
   segundoDigito == doisDigitos[1]
     ? (doisDigitos[1] = 1)
     : (doisDigitos[1] = 'deu ruim 2');
-  console.log(doisDigitos);
   console.log(
     doisDigitos[0] == 1 && doisDigitos[1] == 1 ? 'cpf valido' : 'cpf inválido'
   );
 }
 
-validaCPF('430.713.268-82');
+validaCPF('430.713.268-81');
