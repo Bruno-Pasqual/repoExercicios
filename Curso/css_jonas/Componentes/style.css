@@ -35,8 +35,10 @@ body {
 }
 
 .primeira_linha {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1rem;
+  /* align-items: center; */
 }
 
 .primeira_linha:hover h2,
@@ -46,11 +48,15 @@ body {
   cursor: pointer;
 }
 
-img {
+.arrow_img {
   width: 20px;
   height: 20px;
-  margin-left: 1rem;
-  transform: rotate(90deg);
+  transform: rotate(270deg);
+  transition: all 1s;
+}
+
+.arrow_img.ativo {
+  transform: rotate(360deg);
 }
 
 h1,
@@ -60,7 +66,6 @@ h2 {
 }
 
 h2 {
-  margin-right: 1rem;
   opacity: 0.3;
 }
 
@@ -72,4 +77,8 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+.segunda_linha {
+  grid-column: 2;
 }
