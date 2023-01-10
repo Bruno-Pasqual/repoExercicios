@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+/* ! Começando código ---------------------------------- */
+
+.container {
+  margin-top: 5rem;
+  max-width: 450px;
+  box-shadow: 5px 6px 10px rgba(146, 145, 145, 0.205);
+}
+
+.dropbox_container {
+  padding: 0.5rem;
+}
+
+.primeira_linha {
+  display: flex;
+  align-items: center;
+}
+
+.primeira_linha:hover h2,
+.primeira_linha:hover h1 {
+  color: #2c996c;
+  opacity: 1;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  margin-left: 1rem;
+  transform: rotate(90deg);
+}
+
+h1,
+h2 {
+  font-size: 1.5rem;
+  /* color: #2c996c; */
+}
+
+h2 {
+  margin-right: 1rem;
+  opacity: 0.3;
+}
+
+.segunda_linha p {
+  margin-top: 1rem;
+  padding: 0 10px;
+}
