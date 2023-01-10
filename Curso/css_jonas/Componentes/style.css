@@ -7,18 +7,31 @@
 body {
   display: grid;
   place-content: center;
+  height: 100vh;
 }
 
 /* ! Começando código ---------------------------------- */
 
 .container {
-  margin-top: 5rem;
   max-width: 450px;
-  box-shadow: 5px 6px 10px rgba(146, 145, 145, 0.205);
 }
 
 .dropbox_container {
   padding: 0.5rem;
+  margin-top: 2rem;
+  box-shadow: 5px 6px 10px rgba(146, 145, 145, 0.205);
+  border-radius: 3px;
+  /* transition: all 0.5s; */
+}
+
+.dropbox_container.ativo {
+  border-top: 3px solid #2c996c;
+}
+
+.dropbox_container.ativo h2,
+.dropbox_container.ativo h1 {
+  color: #2c996c;
+  opacity: 1;
 }
 
 .primeira_linha {
@@ -30,6 +43,7 @@ body {
 .primeira_linha:hover h1 {
   color: #2c996c;
   opacity: 1;
+  cursor: pointer;
 }
 
 img {
@@ -53,4 +67,9 @@ h2 {
 .segunda_linha p {
   margin-top: 1rem;
   padding: 0 10px;
+  transition: all 0.5s;
+}
+
+.hidden {
+  display: none;
 }
